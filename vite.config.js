@@ -16,7 +16,7 @@ export default defineConfig({
         short_name: 'SpellingBee',
         description: 'Práctica para concurso de deletreo en inglés',
         theme_color: '#ff5405',
-        background_color: '#fffdd0',
+        background_color: 'slate-100',
         display: 'standalone',
         orientation: 'portrait',
         icons: [
