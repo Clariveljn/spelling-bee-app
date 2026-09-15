@@ -15,18 +15,18 @@ export default defineConfig({
         name: 'Spelling Bee Trainer',
         short_name: 'SpellingBee',
         description: 'Práctica para concurso de deletreo en inglés',
-        theme_color: '#0e0796',
-        background_color: '#d0f3ff',
+        theme_color: '#ff5405',
+        background_color: '#fffdd0',
         display: 'standalone',
         orientation: 'portrait',
         icons: [
           {
-            src: 'pwa-192x192.png',
+            src: 'spelling-bee-s.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'pwa-512x512.png',
+            src: 'spelling-bee-l.png',
             sizes: '512x512',
             type: 'image/png'
           }

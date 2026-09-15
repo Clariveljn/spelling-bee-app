@@ -233,9 +233,15 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col items-center p-4 font-sans text-slate-800">
       <header className="w-full max-w-md my-4 text-center">
-        <h1 className="text-2xl font-black text-indigo-600 tracking-tight">Spelling Bee Oral Trainer</h1>
-        <p className="text-xs text-slate-500 uppercase font-semibold tracking-wider">Práctica por Voz</p>
+        <h1 className="text-2xl font-black text-orange-600 tracking-tight">Spelling Bee Oral Trainer</h1>
       </header>
+
+      {/* Imagen */}
+    <img
+      src="./spelling-bee-l.png"
+      alt="Spelling Bee"
+      className="w-32 h-32 mb-4"
+    />
 
       {/* Selector de Rondas */}
       <nav className="flex gap-2 mb-4 w-full max-w-md">
@@ -249,7 +255,7 @@ export default function App() {
             onClick={() => startRound(item.id)}
             className={`flex-1 py-2 text-sm font-bold rounded-xl shadow-sm transition ${
               round === item.id 
-                ? 'bg-indigo-600 text-white shadow-indigo-200' 
+                ? 'bg-orange-600 text-white shadow-orange-200' 
                 : 'bg-white text-slate-600 hover:bg-slate-50'
             }`}
           >
@@ -296,7 +302,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => speakWord()}
-              className="flex items-center gap-2 px-4 py-1.5 bg-indigo-50 text-indigo-600 rounded-full font-semibold text-sm hover:bg-indigo-100 transition mb-4"
+              className="flex items-center gap-2 px-4 py-1.5 bg-orange-50 text-orange-600 rounded-full font-semibold text-sm hover:bg-orange-100 transition mb-4"
             >
               🔊 Repetir palabra
             </button>
@@ -312,7 +318,7 @@ export default function App() {
               <div className="flex flex-wrap gap-2 justify-center">
                 {spokenLetters.length > 0 ? (
                   spokenLetters.map((letter, idx) => (
-                    <span key={idx} className="w-9 h-11 bg-white border border-slate-300 rounded-lg flex items-center justify-center font-mono font-bold text-xl text-indigo-700 shadow-sm">
+                    <span key={idx} className="w-9 h-11 bg-white border border-slate-300 rounded-lg flex items-center justify-center font-mono font-bold text-xl text-orange-700 shadow-sm">
                       {letter}
                     </span>
                   ))
@@ -334,7 +340,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={handleVerify}
-                className="flex-1 bg-indigo-600 text-white py-3 rounded-2xl font-bold text-base shadow-md shadow-indigo-200 hover:bg-indigo-700 active:scale-[0.98] transition"
+                className="flex-1 bg-orange-600 text-white py-3 rounded-2xl font-bold text-base shadow-md shadow-orange-200 hover:bg-orange-700 active:scale-[0.98] transition"
               >
                 Verificar Deletreo
               </button>
@@ -359,7 +365,7 @@ export default function App() {
                 {/* Resumen de Desempeño */}
                 <div className="w-full bg-slate-50 border border-slate-200 rounded-2xl p-4 my-4">
                   <p className="text-sm text-slate-500 mb-1">Aciertos en el 1° intento</p>
-                  <p className="text-4xl font-extrabold text-indigo-600">
+                  <p className="text-4xl font-extrabold text-orange-600">
                     {firstTryHits} <span className="text-lg text-slate-400">/ {totalInitialWords}</span>
                   </p>
                   <p className="text-xs text-slate-400 mt-2">
@@ -369,7 +375,7 @@ export default function App() {
 
                 <button
                   onClick={() => startRound(round)}
-                  className="w-full bg-indigo-600 text-white py-3 rounded-2xl font-bold hover:bg-indigo-700 shadow-md transition"
+                  className="w-full bg-orange-600 text-white py-3 rounded-2xl font-bold hover:bg-orange-700 shadow-md transition"
                 >
                   Practicar de nuevo
                 </button>
@@ -383,7 +389,7 @@ export default function App() {
                 </p>
                 <button
                   onClick={() => startRound(round)}
-                  className="bg-indigo-600 text-white px-8 py-3 rounded-2xl font-bold hover:bg-indigo-700 shadow-md transition"
+                  className="bg-orange-600 text-white px-8 py-3 rounded-2xl font-bold hover:bg-orange-700 shadow-md transition"
                 >
                   Comenzar Práctica
                 </button>
